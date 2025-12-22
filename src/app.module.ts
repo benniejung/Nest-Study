@@ -33,6 +33,7 @@ import { UsersModule } from './users/users.module';
           username: configService.get('MYSQLDB_USER'),
           password: configService.get('MYSQL_ROOT_PASSWORD'),
           database: configService.get('MYSQLDB_DATABASE'),
+          entities: [__dirname + '/**/*.entity{.ts,.js}'],
           synchronize: true,
         };
       },
