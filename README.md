@@ -1,6 +1,23 @@
-# NestJS Study Project
+## NestJS Study Project
 
 NestJS 학습을 위한 프로젝트입니다.
+
+이 레포지토리는 실무 백엔드 역량 강화를 목표로 한 NestJS 스터디 기록용 저장소입니다.
+
+🗓 주차별 학습 기록
+
+각 주차별로 개념 정리 + 개인 회고를 Notion에 정리했습니다.
+
+| 주차  | 학습 주제                | 내가 한 내용                                  | 노션 링크        |
+| --- | -------------------- | ---------------------------------------- | ------------ |
+| 1주차 | NestJS 개요 & 아키텍처     | Nest 철학, Module/Controller/Service 구조 정리 | 🔗 Notion 링크 |
+| 2주차 |   |  | 🔗 Notion 링크 |
+| 3주차 |    |  | 🔗 Notion 링크 |
+| 4주차 |   |  | 🔗 Notion 링크 |
+| 5주차 |    |  | 🔗 Notion 링크 |
+
+
+
 
 ## 🛠 기술 스택
 
@@ -10,65 +27,6 @@ NestJS 학습을 위한 프로젝트입니다.
 - **ORM**: TypeORM
 - **Container**: Docker & Docker Compose
 
-## 📁 프로젝트 구조
-
-```
-nest-study/
-├── src/
-│   ├── app.controller.ts      # 메인 컨트롤러
-│   ├── app.service.ts         # 메인 서비스
-│   ├── app.module.ts          # 메인 모듈
-│   └── main.ts                # 애플리케이션 진입점
-├── test/                      # E2E 테스트
-├── docker-compose.yml         # Docker Compose 설정
-├── package.json
-└── README.md
-```
-
-## 🚀 시작하기
-
-### 사전 요구사항
-
-- Node.js (v18 이상 권장)
-- npm 또는 yarn
-- Docker & Docker Compose
-
-### 설치
-
-1. 저장소 클론
-
-```bash
-git clone <repository-url>
-cd nest-study
-```
-
-2. 의존성 설치
-
-```bash
-npm install
-```
-
-3. 환경 변수 설정
-   `.env` 파일을 생성하고 필요한 환경 변수를 설정하세요. (자세한 내용은 아래 참조)
-
-4. 데이터베이스 실행
-
-```bash
-docker-compose up -d
-```
-
-5. 애플리케이션 실행
-
-```bash
-# 개발 모드
-npm run start:dev
-
-# 프로덕션 모드
-npm run build
-npm run start:prod
-```
-
-애플리케이션은 기본적으로 `http://localhost:3000`에서 실행됩니다.
 
 ## 🔧 환경 변수 설정
 
@@ -140,19 +98,3 @@ npm run test:cov
 # E2E 테스트
 npm run test:e2e
 ```
-
-## 📝 추가 정보
-
-### TypeORM 설정
-
-TypeORM은 `app.module.ts`에서 설정됩니다. 환경 변수를 통해 데이터베이스 연결 정보를 관리합니다.
-
-### 개발 팁
-
-- 개발 중에는 `npm run start:dev`를 사용하여 코드 변경 시 자동으로 재시작됩니다.
-- TypeORM의 마이그레이션 기능을 활용하여 데이터베이스 스키마를 관리할 수 있습니다.
-- `.env` 파일은 버전 관리에 포함하지 마세요. `.gitignore`에 이미 추가되어 있습니다.
-
-## 📄 라이선스
-
-이 프로젝트는 학습 목적으로 만들어졌습니다.
