@@ -75,15 +75,14 @@ npm run start:prod
 프로젝트 루트에 `.env` 파일을 생성하고 다음 변수들을 설정하세요:
 
 ```env
-# 서버 설정
-PORT=3000
-
-# MySQL 데이터베이스 설정
 MYSQLDB_HOST=localhost
-MYSQLDB_LOCAL_PORT=3306
 MYSQLDB_USER=root
-MYSQLDB_PASSWORD=1234
+MYSQLDB_LOCAL_PORT=3306
+MYSQL_ROOT_PASSWORD=123456789
 MYSQLDB_DATABASE=nest_study
+
+NEXTJS_APP_LOCAL_PORT=1027
+NEXTJS_APP_DOCKER_PORT=1027
 ```
 
 ## 🗄 데이터베이스 설정
