@@ -33,7 +33,7 @@ import { UsersModule } from './users/users.module';
           username: configService.get('MYSQLDB_USER'),
           password: configService.get('MYSQL_ROOT_PASSWORD'),
           database: configService.get('MYSQLDB_DATABASE'),
-          synchronize: false, // Entity 없이 직접 쿼리 사용
+          synchronize: true,
         };
       },
     }),
