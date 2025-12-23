@@ -7,7 +7,7 @@ import {
   ParseIntPipe,
 } from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse, ApiParam } from '@nestjs/swagger';
-import { UsersService } from './users.service';
+import { UsersService } from './user.service';
 import { CreateUserDto } from './dto/create-user.dto';
 
 @ApiTags('users')
