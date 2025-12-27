@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import * as Joi from 'joi';
-import { UsersModule } from './users/users.module';
+import { UsersModule } from './module/user/users.module';
 
 @Module({
   imports: [

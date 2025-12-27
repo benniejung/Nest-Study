@@ -9,9 +9,9 @@ async function bootstrap() {
   // Validation Pipe
   app.useGlobalPipes(
     new ValidationPipe({
-      whitelist: true,
-      forbidNonWhitelisted: true,
-      transform: true,
+      whitelist: true, // DTO에 없는 속성 제거 => 의도하지 않은 데이터 방지
+      forbidNonWhitelisted: true, // DTO에 없는 속성 있으면 에러
+      transform: true, // 타입 자동 변환 (string → number 등)
     }),
   );
 

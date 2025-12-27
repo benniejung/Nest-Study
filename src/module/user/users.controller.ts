@@ -18,7 +18,7 @@ export class UsersController {
   @Post()
   @ApiOperation({ summary: '유저 생성' })
   @ApiResponse({ status: 201, description: '유저 생성 성공' })
-  @ApiResponse({ status: 409, description: '이메일 또는 username 중복' })
+  @ApiResponse({ status: 400, description: '이메일 또는 username 중복' })
   create(@Body() createUserDto: CreateUserDto): Promise<any> {
     return this.usersService.create(createUserDto);
   }

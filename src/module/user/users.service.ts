@@ -3,20 +3,15 @@ import {
   ConflictException,
   NotFoundException,
 } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { User } from './entities/user.entity';
-import { UserAccount } from './entities/user-account.entity';
+import { UserRepository, UserAccountRepository } from 'src/database';
 import { CreateUserDto } from './dto/create-user.dto';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsersService {
   constructor(
-    @InjectRepository(User)
-    private userRepository: Repository<User>,
-    @InjectRepository(UserAccount)
-    private userAccountRepository: Repository<UserAccount>,
+    private readonly userRepository: UserRepository,
+    private readonly userAccountRepository: UserAccountRepository,
   ) {}
 
   /**

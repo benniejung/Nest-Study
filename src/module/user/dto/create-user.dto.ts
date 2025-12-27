@@ -1,10 +1,15 @@
 import { ApiProperty } from '@nestjs/swagger';
+import { IsString, IsNotEmpty, IsNumber } from 'class-validator';
 
 export class CreateUserDto {
   @ApiProperty({ description: '사용자 이름', example: 'testuser' })
+  @IsString()
+  @IsNotEmpty()
   username: string;
 
   @ApiProperty({ description: '닉네임', example: '테스트유저' })
+  @IsString()
+  @IsNotEmpty()
   nickname: string;
 
   @ApiProperty({
@@ -15,6 +20,8 @@ export class CreateUserDto {
   profileImage?: string;
 
   @ApiProperty({ description: '이메일', example: 'test@example.com' })
+  @IsString()
+  @IsNotEmpty()
   email: string;
 
   @ApiProperty({
@@ -22,6 +29,8 @@ export class CreateUserDto {
     example: 'password123',
     required: false,
   })
+  @IsString()
+  @IsNotEmpty()
   password?: string;
 
   @ApiProperty({
@@ -30,5 +39,7 @@ export class CreateUserDto {
     required: false,
     default: 0,
   })
+  @IsNumber()
+  @IsNotEmpty()
   provider?: number;
 }
